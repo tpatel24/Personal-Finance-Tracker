@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+                <li><a href="#reports">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-cards">
+                <div class="card income-card" id="income-card">
+                    <h3>Total Income</h3>
+                    <p id="total-income">$0</p>
+                </div>
+                <div class="card expense-card" id="expense-card">
+                    <h3>Total Expenses</h3>
+                    <p id="total-expenses">$0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transactions Section -->
+        <section id="transactions">
+            <h2>Transactions</h2>
+            <div class="transaction-container">
+                <!-- Transaction Form -->
+                <div class="transaction-form-container">
+                    <h3>Add New Transaction</h3>
+                    <form id="transaction-form">
+                        <div class="form-group">
+                            <label for="transaction-date">Date</label>
+                            <input type="date" id="transaction-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="transaction-category">Category</label>
+                            <input type="text" id="transaction-category" placeholder="E.g., Grocery, Rent" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="transaction-amount">Amount</label>
+                            <input type="number" id="transaction-amount" placeholder="Enter amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="transaction-type">Type</label>
+                            <select id="transaction-type">
+                                <option value="income">Income</option>
+                                <option value="expense">Expense</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="add-transaction-btn">Add Transaction</button>
+                    </form>
+                </div>
+
+                <!-- Transaction List -->
+                <div class="transaction-list-container">
+                    <h3>Transaction History</h3>
+                    <ul id="transaction-list">
+                        <!-- Transactions will be dynamically listed here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+            <h2>Reports</h2>
+            <canvas id="expense-chart" width="300" height="300"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Personal Finance Tracker</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

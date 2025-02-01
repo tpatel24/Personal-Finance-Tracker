@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Section */
+.dashboard-cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    padding: 1rem;
+    background-color: white;
+    color: #333;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.income-card:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.expense-card:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Transactions Section */
+.transaction-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.transaction-form-container,
+.transaction-list-container {
+    flex: 1;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-form-container h3,
+.transaction-list-container h3 {
+    margin-bottom: 1rem;
+    color: #6200ea;
+    font-weight: bold;
+    text-align: center;
+}
+
+.transaction-form-container .form-group {
+    margin-bottom: 1rem;
+}
+
+.transaction-form-container .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.transaction-form-container .form-group input,
+.transaction-form-container .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.transaction-form-container .add-transaction-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transaction-form-container .add-transaction-btn:hover {
+    background-color: #3700b3;
+}
+
+/* Transaction List with Scroll View */
+.transaction-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 350px; /* Restrict the height for 5 items */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Optional: thin scrollbar */
+    scrollbar-color: #6200ea #f4f4f9; /* Optional: custom scrollbar color */
+}
+
+.transaction-list-container ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.transaction-list-container ul::-webkit-scrollbar-thumb {
+    background-color: #6200ea;
+    border-radius: 4px;
+}
+
+.transaction-list-container ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction-list-container ul li span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.transaction-list-container ul li .transaction-type {
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.transaction-list-container ul li .transaction-type.income {
+    color: white;
+    background-color: #28a745;
+}
+
+.transaction-list-container ul li .transaction-type.expense {
+    color: white;
+    background-color: #dc3545;
+}
+
+/* Reports Section */
+#expense-chart {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
