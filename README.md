@@ -4,7 +4,7 @@ A simple and intuitive web-based finance management app built using HTML, CSS, a
 
 🚀 Features
 
-📊 Income & Expense Tracking – Log transactions and monitor your financial health. /n
+📊 Income & Expense Tracking – Log transactions and monitor your financial health. \n
 📈 Real-Time Visualizations – Interactive charts powered by Chart.js for clear insights. /n
 🎯 Savings Goal Tracking – Set and track savings goals to improve budgeting habits.
 💾 Local Storage Integration – Data persists across sessions with real-time updates.
